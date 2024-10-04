@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="main.js" defer></script>
+  <title>Gerador de Croqui</title>
+</head>
+<body>
+  <div class="box_geral">
+      <div class="dados">
+        <h1 class="titulo">Gerador de Croqui</h1>
+        <div class="box_tratamentos">
+            <label for="tratamentos" id="label_tratamentos">Tratamentos: </label>
+            <input type="number" name="tratamentos" id="tratamentos" placeholder="Quantidade de tratamentos..." required>
+        </div>
+        <div class="box_tratamentos">
+          <label for="input_titulo" id="label_titulo">Nome do ensaio:</label>
+          <input type="text" id="input_titulo" placeholder="Digite o nome do ensaio..." required maxlength="55">
+        </div>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" name="sem_cores" id="checkbox_cores">
+        <label for="checkbox_cores"> Gerar com cores</label>
+      </div>
+        <div class="box_botao">
+          <button id="generatePdf" type="submit" class="generatePdf" >Gerar PDF</button>
+          <div class="reload"></div>
+        </div>
+        
+  </div>
+  <footer class="criador">
+    <p>Criadores:</p>
+    <ul>
+      <a href="https://www.instagram.com/guilhermer.dev/" style="text-decoration: none;" target="_blank" >
+        <li style="--cor1: #f80ad0; --cor2: #eefe12;">
+          <span class="icon"><i class="bi bi-instagram"></i></span>
+          <span class="text">Guilherme R.</span>
+        </li>
+      </a>
+      <a href="https://www.instagram.com/denilson_oliveira_br/" style="text-decoration: none;" target="_blank">
+        <li style="--cor1: #f80ad0; --cor2: #eefe12;">
+          <span class="icon"><i class="bi bi-instagram"></i></span>
+          <span class="text">Denilson O.</span>
+        </li>
+      </a>
+    </ul>
+  </footer>
+
+</html>
