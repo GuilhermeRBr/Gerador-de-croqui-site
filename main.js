@@ -16,7 +16,9 @@ worker.onmessage = function (e) {
   const botao = document.querySelector('#generatePdf')
   botao.innerHTML = 'Pronto'
   botao.style = 'background: #f1f5f4; color: #333; pointer-events: none;'
-  pdf.save('Tratamentos')
+
+  pdf.save(texto.value)
+  
   document.querySelector('.reload').innerHTML = '<button id="recarregar">Gerar novamente?</button>'
   
   document.getElementById('recarregar').addEventListener('click', function(){
