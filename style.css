@@ -278,3 +278,41 @@ ul li .text{
         margin-top: 10px;
     }  
 }
+
+@media screen and (max-height: 350px) {
+    .box_geral {
+        margin-top: 65px;
+        height: 400px;
+        padding: 70px;
+        margin-left: 120px;
+    }
+    .dados h1 {
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+    
+    .box_tratamentos {
+        margin-bottom: 0px;    
+    }
+    .checkbox{
+        padding-top: 4px;
+        
+    }
+
+    .generatePdf{
+        margin-top: 2px;
+    } 
+    .criador {
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+    body {
+        flex-direction: row;
+    }
+
+    #recarregar {
+        margin-top: 3px;
+   
+    }
+    
+}
