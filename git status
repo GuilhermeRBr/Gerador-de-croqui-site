@@ -1,0 +1,23 @@
+[33mcommit de704a4963178d426b9f0feb345ebcdb43a2c152[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: GuilhermeRBr <guilhermerebrito@gmail.com>
+Date:   Mon Oct 7 15:37:11 2024 -0300
+
+    Correção do titulo
+
+[33mcommit 24060dcaa660d98f6b2e411475317628074d0fbb[m
+Author: GuilhermeRBr <guilhermerebrito@gmail.com>
+Date:   Fri Oct 4 15:54:43 2024 -0300
+
+    Correção no botão 'Gerar novamente?'
+
+[33mcommit e90d970d189aadee6e7dec3e0dffcb66080697f0[m
+Author: GuilhermeRBr <guilhermerebrito@gmail.com>
+Date:   Fri Oct 4 14:52:00 2024 -0300
+
+    Retirando algumas fontes inutilizadas
+
+[33mcommit 39586ebf6adab0af954727c946feef73ff387370[m
+Author: GuilhermeRBr <guilhermerebrito@gmail.com>
+Date:   Fri Oct 4 14:50:48 2024 -0300
+
+    Gerador de croqui, versão 1.0
