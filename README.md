@@ -19,6 +19,7 @@ Na experimentação agrícola, um croqui é essencial para planejar e visualizar
 - **Interface moderna e responsiva** utilizando **HTML, CSS e Bootstrap Icons**.
 - **Pré-visualização e recarregamento dinâmico** para facilitar novos ensaios.
 - **Links para os desenvolvedores** na seção de rodapé.
+- **Geração totalmente aleatória**, sem repetição de valores em colunas, linhas ou diagonais.
 
 ## 🛠 Tecnologias Utilizadas
 - **JavaScript (ES6+)**
@@ -51,7 +52,11 @@ Na experimentação agrícola, um croqui é essencial para planejar e visualizar
 - O Web Worker melhora a performance ao processar a matriz sem travar a interface.
 - As cores das células são definidas por um objeto `cores`, garantindo diversidade visual.
 - A largura do PDF é dinâmica e se ajusta ao número de tratamentos inserido.
+- O croqui gerado é **totalmente aleatório**, garantindo que não haja repetição de valores em colunas, linhas ou diagonais.
 - A aplicação é responsiva e compatível com diferentes dispositivos.
+
+## 🌍 Acesse o Site
+Acesse o projeto em: https://geradordecroqui.netlify.app/
 
 ## 👨‍💻 Criadores
 Este projeto foi desenvolvido por:
