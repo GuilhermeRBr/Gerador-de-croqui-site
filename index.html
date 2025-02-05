@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <link rel="shortcut icon" href="imagem/icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <script src="main.js" defer></script>
+  <script src="modal.js"defer></script>
   <title>Gerador de Croqui</title>
 </head>
 <body>
+  
   <div class="box_geral">
       <div class="dados">
         <h1 class="titulo">Gerador de Croqui</h1>
@@ -34,8 +36,33 @@
           <button id="generatePdf" type="submit" class="generatePdf" >Gerar PDF</button>
           <div class="reload"></div>
         </div>
-        
+
+        <button onclick="abrirJanela()" id="btn_croqui">O que é Croqui?</button>
+
+        <div class="janela_modal" id="janela_modal">
+           <div class="modal">
+            <button class="fechar" id="fechar">X</button>
+             <h1>O que é Croqui?</h1>
+             <p>Croqui é um esboço ou desenho simplificado usado para representar uma ideia de forma visual. No contexto agrícola, um croqui pode ser utilizado para mapear experimentos, distribuindo tratamentos de maneira organizada. 
+             </p>
+             <p>Na experimentação agrícola, um croqui é essencial para planejar e visualizar a disposição dos tratamentos em campo. Ele permite:
+              <ul>
+                <li>Organizar os diferentes tratamentos em um experimento.</li>
+                <li>Garantir uma distribuição equilibrada para evitar viés nos resultados.</li>
+              
+                <li>Facilitar a identificação e a análise dos tratamentos aplicados, otimizando o acompanhamento do experimento e permitindo ajustes mais precisos ao longo do processo.</li>
+              </ul> 
+              </p> <p>
+                Outro benefício do croqui é a possibilidade de documentação clara e acessível, auxiliando na comunicação entre pesquisadores, técnicos e demais envolvidos no estudo. Isso contribui para a reprodutibilidade dos experimentos e para a comparação de resultados entre diferentes ensaios.
+              </p>
+             
+           </div>
+ 
+        </div> 
   </div>
+
+
+  
   <footer class="criador">
     <p>Criadores:</p>
     <ul>

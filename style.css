@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(imagem/fundo.jpg);
+    background-image: url(img/fundo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,11 +169,13 @@ body {
 }
 
 #recarregar {
+    position: absolute;
+    right: calc(50% - 75px);
     color: #02bb12;
     cursor: pointer;
     border: none;
     width: 150px;
-    height: 20px;
+    height: 20px;;
     font-weight: 600;
     margin-top: 15px;
     background-color: transparent;
@@ -190,7 +192,95 @@ body {
 }
 
 
+/* Janela suspensa */
 
+#btn_croqui {
+    position: relative;
+    border: none;
+    left: 300px;
+    top: 47px;
+    width: 105px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #02bb12;
+    background-color: transparent;
+}
+
+#btn_croqui:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+.janela_modal { 
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+.janela_modal.abrir{
+    display: flex;
+}
+
+.modal {
+    width: 40%;
+    height: 45%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #ffffffc9;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.modal > p {
+    text-align: justify;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.modal li {
+    text-align: left;
+    margin-left: 30px;
+}
+
+
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    color: #ffffff;
+    background-color: #ff0000;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes abrirmodal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+    to { 
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir .modal {
+    animation: abrirmodal 0.4s forwards;
+}
+
+/* Footer */
 .criador {
     width: 100px;
     height: 90px;
@@ -208,15 +298,14 @@ body {
     margin-bottom: 7px;
 }
 
-
-ul {
+.criador ul {
     list-style-type: none; 
     display: flex;
     position: relative;
     flex-direction: column;
 }
 
-ul li {
+.criador ul li {
     width: 90px;
     height: 20px;
     box-shadow: 0 3px 5px #00000050;
@@ -231,18 +320,18 @@ ul li {
     
 }
 
-ul li:hover{
+.criador ul li:hover{
     transform: scale(1.3);
     background: linear-gradient(45deg, var(--cor1), var(--cor2));
 }
 
-ul li .icon {
+.criador ul li .icon {
     font-size: 13px;
     color:#000000;
     margin: 3px;
 }
 
-ul li .text{
+.criador ul li .text{
     font-size: 11px;
     color: #000000;    
 }

@@ -1,13 +1,12 @@
 self.onmessage = function (e) {
   const { rows, cols } = e.data;
 
-  // Função para gerar a matriz
   function geradorMatrix(rows, cols) {
     while (true) {
       const matrix = [];
       for (let r = 0; r < rows; r++) {
         const row = Array.from({ length: cols }, (_, i) => i + 1);
-        row.sort(() => Math.random() - 0.5);  // Embaralha os números
+        row.sort(() => Math.random() - 0.5);
         matrix.push(row);
       }
 
@@ -26,13 +25,12 @@ self.onmessage = function (e) {
         }
 
         if (isValid) {
-          self.postMessage(matrix);  // Envia o resultado de volta
+          self.postMessage(matrix); 
           return;
         }
       }
     }
   }
 
-  // Gera a matriz e envia para o script principal
   geradorMatrix(rows, cols);
 };
