@@ -1,5 +1,5 @@
 // Criar o Web Worker
-const worker = new Worker('worker.js');
+const worker = new Worker('js/worker.js');
 let pdf
 // Função para lidar com a mensagem do worker
 worker.onmessage = function (e) {

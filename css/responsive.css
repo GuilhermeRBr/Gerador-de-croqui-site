@@ -1,0 +1,91 @@
+@media screen and (max-width: 1200px) {
+    .modal {
+        height: 55% !important
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    
+    .box_geral {
+        height: 450px;
+        max-width: 350px;  
+    }
+    .dados h1 {
+        margin-bottom: 15px
+    }
+    .modal {
+        width: 90% !important;
+        height: 70% !important;
+        backdrop-filter: none !important;
+        
+    }
+    #btn_croqui {
+        left: 220px !important;
+        top: 30px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .box_geral {
+        height: 350px;
+        max-width: 310px;  
+    }
+    .dados h1 {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .checkbox{
+        padding-top: 0px;
+    }
+    .generatePdf{
+        margin-top: 7px;
+    }  
+    .criador {
+        margin-top: 10px;
+    }  
+    #btn_croqui {
+        left: 180px !important;
+    }
+}
+
+
+
+@media screen and (max-height: 350px) {
+    .box_geral {
+        margin-top: 65px;
+        max-height: 400px;
+        padding: 70px;
+        margin-left: 120px;
+    }
+    .dados h1 {
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+    
+    .box_tratamentos {
+        margin-bottom: 0px;    
+    }
+    .checkbox{
+        padding-top: 4px;
+        
+    }
+
+    .generatePdf{
+        margin-top: 2px;
+    } 
+    .criador {
+        margin-left: 20px;
+        margin-top: 0px;
+    }
+    body {
+        flex-direction: row;
+    }
+
+    #recarregar {
+        margin-top: 3px;
+    }
+    #btn_croqui {
+        top: -10px !important;
+    }
+
+}
