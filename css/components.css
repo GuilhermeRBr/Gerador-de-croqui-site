@@ -108,6 +108,7 @@
     cursor: pointer;
     color: #02bb12;
     background-color: transparent;
+    user-select: none;
 }
 
 #btn_croqui:hover {
