@@ -49,20 +49,15 @@ export function generatePdf(matriz, texto, semcor, tratamento) {
     unit: 'mm',
     format: [580, 300]
     });
-  
-    // Definindo o número de tratamentos
 
     const aleatorio = matriz
     let posX = 0;
     let posY = 40;
-    // Centralizar
     let centro_x = (580 - (13.9 * tratamento)) / 2
 
-  
-    // Desenhando os retângulos e preenchendo com cores
     aleatorio.forEach(row => {
-      posY += 35;  // Ajuste da posição vertical
-      posX = centro_x;// Reiniciando a posição X
+      posY += 35;
+      posX = centro_x;
 
       row.forEach(num => {
         if(semcor == false){
@@ -71,32 +66,29 @@ export function generatePdf(matriz, texto, semcor, tratamento) {
           var cor = cores[num];
         }
         doc.setFillColor(cor);
-        doc.rect(posX, posY, 11, 25,'F');  // Desenhando o retângulo com a cor de fundo
+        doc.rect(posX, posY, 11, 25,'F');
         doc.rect(posX, posY, 11, 25,'S');
-        // Movendo a posição X para o próximo retângulo
+
         posX += 14;
       });
     });
   
-    // Desenhando os números sobre os retângulos
     posY = 50;
     aleatorio.forEach(row => {
       posY += 35;
       posX = centro_x; 
       row.forEach(num => {
-        doc.setTextColor(0, 0, 0);  // Cor do texto (preto)
+        doc.setTextColor(0, 0, 0);
         if (num > 9){
           doc.text(`T${num}`, posX+0.8, posY+5);
         } else {
-          doc.text(`T${num}`, posX+2, posY+5);  // Desenha o texto centralizado
+          doc.text(`T${num}`, posX+2, posY+5);
         }
         
         posX += 14;
       });
     });
     
-    
-    //letras
     const letras = {
       1: 'D',
       2: 'C',
@@ -104,8 +96,6 @@ export function generatePdf(matriz, texto, semcor, tratamento) {
       4: 'A'
     }
      
-  
-    // Enumerando colunas e adicionando letras
     posY = 50;
     let posnum = centro_x + 4 
     for (let i = 1; i <= tratamento; i++){
@@ -125,7 +115,7 @@ export function generatePdf(matriz, texto, semcor, tratamento) {
       }
       posnum+= 14;
     }
-    // Escrever titulo
+
     doc.setFontSize(40)
     const titulo = texto.value.toUpperCase()
     const largura_texto = doc.getTextWidth(titulo);

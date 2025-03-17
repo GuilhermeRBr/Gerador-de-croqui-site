@@ -9,8 +9,9 @@ self.onmessage = function (e) {
         matriz.push(row);
       }
 
+
       if (matriz.every(row => new Set(row).size === cols) &&
-        Array.from({ length: cols }, (_, c) => new Set(matriz.map(row => row[c])).size).every(size => size === rows)) {
+      Array.from({ length: cols }, (_, c) => new Set(matriz.map(row => row[c])).size).every(size => size === rows)) {
         
         let isValid = true;
         for (let i = 0; i < rows - 1; i++) {
@@ -22,7 +23,7 @@ self.onmessage = function (e) {
           }
           if (!isValid) break;
         }
-
+        
         if (isValid) {
           self.postMessage(matriz); 
           return;
@@ -33,3 +34,4 @@ self.onmessage = function (e) {
 
   geradorMatrix(rows, cols);
 };
+
