@@ -1,69 +1,163 @@
-# 📄 Gerador de Croqui
+<div align="center">
 
-Este projeto é uma aplicação web interativa para gerar croquis personalizados em formato PDF. Ele permite inserir um número específico de tratamentos, definir um título para o ensaio e escolher se deseja ou não cores nos elementos gráficos. O sistema utiliza **Web Workers** para melhorar o desempenho na geração de dados, garantindo uma experiência fluida para o usuário.
+<h1 align="center">Gerador de Croqui</h1>
 
-## 🤔 O que é um Croqui?
-Croqui é um esboço ou desenho simplificado usado para representar uma ideia de forma visual. No contexto agrícola, um croqui pode ser utilizado para mapear experimentos, distribuindo tratamentos de maneira organizada.
+<p align="center">
+  <strong>Gerador de Croqui é uma ferramenta web open-source para gerar croquis de experimentos agrícolas em PDF, com distribuição aleatória de tratamentos, personalização de cores e processamento via Web Workers.</strong>
+</p>
 
-## 🌱 Croqui na Experimentação Agrícola
-Na experimentação agrícola, um croqui é essencial para planejar e visualizar a disposição dos tratamentos em campo. Ele permite:
-- Organizar os diferentes tratamentos em um experimento.
-- Garantir uma distribuição equilibrada para evitar viés nos resultados.
-- Facilitar a identificação e a análise dos tratamentos aplicados.
+<p align="center">
+  <a href="#"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue"></a>
+  <a href="#"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/GuilhermeRBr/Gerador-de-croqui-site?color=green"></a>
+  <a href="#"><img alt="Last Commit" src="https://img.shields.io/github/last-commit/GuilhermeRBr/Gerador-de-croqui-site?color=purple"></a>
+</p>
 
-## 🚀 Funcionalidades
-- **Geração de Croquis em PDF** com base nos parâmetros fornecidos.
-- **Uso de Web Workers** para processamento paralelo e melhor desempenho.
-- **Opção de personalização de cores** ativada por checkbox.
-- **Validação de entrada** para garantir que apenas valores entre 5 e 40 sejam aceitos.
-- **Interface moderna e responsiva** utilizando **HTML, CSS e Bootstrap Icons**.
-- **Pré-visualização e recarregamento dinâmico** para facilitar novos ensaios.
-- **Links para os desenvolvedores** na seção de rodapé.
-- **Geração totalmente aleatória**, sem repetição de valores em colunas, linhas ou diagonais.
+<br />
 
-## 🛠 Tecnologias Utilizadas
-- **JavaScript (ES6+)**
-- **Web Workers** (para processamento em segundo plano)
-- **jsPDF** (para geração e manipulação de PDFs)
-- **HTML5 e CSS3**
-- **Google Fonts** (Open Sans)
-- **Bootstrap Icons**
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js" alt="Tech Stack Icons" />
+</p>
 
-## 📦 Como Usar
-1. **Acesse a página** e preencha os seguintes campos:
-   - **Quantidade de tratamentos** (entre 5 e 40).
-   - **Nome do ensaio** para ser inserido no PDF.
-   - Marque ou desmarque a opção de **Gerar com cores**.
-2. **Gerar o PDF:**
-   - Clique no botão **Gerar PDF**.
-   - O Web Worker processará os dados e criará o arquivo.
-3. **Baixar o arquivo:**
-   - O PDF será salvo automaticamente com o nome digitado.
-   - Caso deseje gerar um novo croqui, clique no botão **Gerar novamente?**.
+</div>
 
-## 📜 Estrutura do Código
-- `worker.js` → Responsável pelo cálculo da matriz de dados.
-- `main.js` → Comunicação com o Web Worker e geração do PDF.
-- `index.html` → Interface do usuário e estrutura dos formulários.
-- `style.css` → Estilos da interface e elementos gráficos.
-- `imagem/icon.ico` → Ícone do site.
+---
 
-## 📝 Notas Importantes
-- O Web Worker melhora a performance ao processar a matriz sem travar a interface.
-- As cores das células são definidas por um objeto `cores`, garantindo diversidade visual.
-- A largura do PDF é dinâmica e se ajusta ao número de tratamentos inserido.
-- O croqui gerado é **totalmente aleatório**, garantindo que não haja repetição de valores em colunas, linhas ou diagonais.
-- A aplicação é responsiva e compatível com diferentes dispositivos.
+> **Este é um dos meus primeiros projetos** — desenvolvido **100% sem o uso de IA**, do zero, com HTML, CSS e JavaScript puro. Está no ar em produção em [geradordecroqui.netlify.app](https://geradordecroqui.netlify.app/).
 
-## 🌍 Acesse o Site
-Acesse o projeto em: https://geradordecroqui.netlify.app/
+---
 
-## 👨‍💻 Criadores
-Este projeto foi desenvolvido por:
-- [Guilherme R.](https://www.instagram.com/guilhermer.dev/)
+## Sobre o projeto
 
-Ideia de:
-- [Denilson O.](https://www.instagram.com/denilson_oliveira_br/)
+O **Gerador de Croqui** é uma aplicação web para **planejamento visual de experimentos agrícolas**, permitindo gerar e exportar croquis em PDF de forma rápida e totalmente aleatória.
 
-Siga-nos para acompanhar mais projetos e novidades! 🚀
+> Desenvolvido para pesquisadores e técnicos agrícolas que precisam organizar a disposição de tratamentos em campo com praticidade e sem repetição de valores em linhas, colunas ou diagonais.
 
+### O que é um Croqui?
+
+Croqui é um esboço simplificado usado para representar a distribuição de tratamentos em um experimento de campo. Ele permite:
+
+- Organizar os tratamentos de forma visualmente clara
+- Garantir uma distribuição equilibrada e evitar viés nos resultados
+- Facilitar a comunicação entre pesquisadores, técnicos e demais envolvidos
+
+### Funcionalidades
+
+- Geração de croquis em **PDF** com layout dinâmico baseado no número de tratamentos
+- **Distribuição totalmente aleatória** — nenhum tratamento se repete na mesma linha, coluna ou diagonal
+- **Opção de cores** por tratamento, com paleta de até 40 cores distintas
+- **Web Workers** para processamento em segundo plano, sem travar a interface
+- Validação de entrada (aceita de 5 a 40 tratamentos)
+- Campo de nome do ensaio inserido diretamente no PDF gerado
+- Interface responsiva e moderna
+- Botão "Gerar novamente?" para novo ensaio sem recarregar a página
+
+> **Algoritmo de aleatoriedade:** cada geração garante que nenhum tratamento se repete em qualquer linha, coluna ou diagonal do croqui — assegurando a integridade estatística do experimento.
+
+---
+
+## Tecnologias Usadas
+
+| Tecnologia | Descrição |
+|------------|-----------|
+| ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Estrutura da interface |
+| ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Estilização e responsividade |
+| ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Lógica da aplicação (ES6+) |
+| ![Web Workers](https://img.shields.io/badge/-Web%20Workers-gray?style=flat&logo=javascript&logoColor=white) | Processamento paralelo sem travar a UI |
+| ![jsPDF](https://img.shields.io/badge/-jsPDF-red?style=flat) | Geração e exportação de PDFs |
+
+---
+
+## Como usar
+
+1. Acesse o site em [geradordecroqui.netlify.app](https://geradordecroqui.netlify.app/)
+2. Preencha os campos:
+   - **Quantidade de tratamentos** (entre 5 e 40)
+   - **Nome do ensaio** (será exibido como título no PDF)
+   - Marque **"Gerar com cores"** se quiser células coloridas
+3. Clique em **Gerar PDF** — o arquivo será baixado automaticamente
+4. Para um novo croqui, clique em **Gerar novamente?**
+
+---
+
+## Como rodar localmente
+
+Não há dependências de instalação. Basta clonar e abrir o arquivo no navegador:
+
+```bash
+git clone https://github.com/GuilhermeRBr/Gerador-de-croqui-site.git
+cd Gerador-de-croqui-site
+# Abra o index.html no seu navegador
+```
+
+> Como o projeto usa módulos ES6 (`type="module"`), recomenda-se usar uma extensão como **Live Server** (VS Code) ou qualquer servidor HTTP local para evitar erros de CORS.
+
+---
+
+## Estrutura de Pastas
+
+```
+Gerador-de-croqui-site/
+├── assets/
+│   ├── icons/
+│   │   └── favicon.ico
+│   └── img/
+│       └── fundo.jpg
+├── css/
+│   ├── animations.css
+│   ├── components.css
+│   ├── fonts.css
+│   ├── layout.css
+│   ├── reset.css
+│   ├── responsive.css
+│   └── style.css
+├── js/
+│   ├── dom.js
+│   ├── main.js
+│   ├── utils.js
+│   └── worker.js
+├── index.html
+└── README.md
+```
+
+---
+
+## Colaboradores
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/GuilhermeRBr.png" width="100px;" alt="Guilherme Rebouças"/><br />
+      <sub><b>Guilherme Rebouças</b></sub><br />
+      <a href="https://www.instagram.com/guilhermer.dev/" target="_blank">@guilhermer.dev</a><br />
+      <span>Desenvolvedor</span>
+    </td>
+    <td align="center">
+      <img src="assets/img/826046762_18338046211272533_6585128061524541893_n.jpg" width="100px;" alt="Denilson Oliveira"/><br />
+      <sub><b>Denilson Oliveira</b></sub><br />
+      <a href="https://www.instagram.com/denilson_oliveira_br/" target="_blank">@denilson_oliveira_br</a><br />
+      <span>Idealizador</span>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+## Preview
+
+<div align="center">
+  <img src="assets/img/image2.png" alt="Preview 3" width="48%" style="vertical-align: top;" />
+  &nbsp;
+  <img src="assets/img/image.png" alt="Preview 2" width="48%" style="vertical-align: top;" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="assets/img/image1.png" alt="Preview do Gerador de Croqui" width="80%" />
+</div>
