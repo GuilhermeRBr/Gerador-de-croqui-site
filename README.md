@@ -22,6 +22,10 @@
 
 ---
 
+> **Este é um dos meus primeiros projetos** — desenvolvido **100% sem o uso de IA**, do zero, com HTML, CSS e JavaScript puro. Está no ar em produção em [geradordecroqui.netlify.app](https://geradordecroqui.netlify.app/).
+
+---
+
 ## Sobre o projeto
 
 O **Gerador de Croqui** é uma aplicação web para **planejamento visual de experimentos agrícolas**, permitindo gerar e exportar croquis em PDF de forma rápida e totalmente aleatória.
@@ -39,13 +43,15 @@ Croqui é um esboço simplificado usado para representar a distribuição de tra
 ### Funcionalidades
 
 - Geração de croquis em **PDF** com layout dinâmico baseado no número de tratamentos
-- **Distribuição totalmente aleatória**, sem repetição em linhas, colunas ou diagonais
+- **Distribuição totalmente aleatória** — nenhum tratamento se repete na mesma linha, coluna ou diagonal
 - **Opção de cores** por tratamento, com paleta de até 40 cores distintas
 - **Web Workers** para processamento em segundo plano, sem travar a interface
 - Validação de entrada (aceita de 5 a 40 tratamentos)
 - Campo de nome do ensaio inserido diretamente no PDF gerado
 - Interface responsiva e moderna
 - Botão "Gerar novamente?" para novo ensaio sem recarregar a página
+
+> **Algoritmo de aleatoriedade:** cada geração garante que nenhum tratamento se repete em qualquer linha, coluna ou diagonal do croqui — assegurando a integridade estatística do experimento.
 
 ---
 
@@ -139,3 +145,19 @@ Gerador-de-croqui-site/
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+## Preview
+
+<div align="center">
+  <img src="assets/img/image2.png" alt="Preview 3" width="48%" style="vertical-align: top;" />
+  &nbsp;
+  <img src="assets/img/image.png" alt="Preview 2" width="48%" style="vertical-align: top;" />
+</div>
+
+<br />
+
+<div align="center">
+  <img src="assets/img/image1.png" alt="Preview do Gerador de Croqui" width="80%" />
+</div>
